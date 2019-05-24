@@ -71,6 +71,7 @@ var Controller = [
   ) {
     $scope.hasMetricsPlugin = hasPlugin('cockpit.dashboard.metrics', 'executed-activity-instances');
     $scope.hasProcessSearch = hasPlugin('cockpit.processes.dashboard', 'search-process-instances');
+    $scope.hasDecisionSearch = hasPlugin('cockpit.decisions.dashboard', 'decisions-instances-search');
     $scope.hasCaseSearch = hasPlugin('cockpit.cases.dashboard', 'case-instances-search');
     $scope.hasTaskSearch = hasPlugin('cockpit.tasks.dashboard', 'search-tasks');
 
