@@ -247,10 +247,16 @@
           <div class="stats-section decisions col-sm-12 col-md-6 col-lg-12">
             <div class="stats-label">{{ 'DASHBOARD_DECISION_DEFINITIONS' | translate }}</div>
             <a class="value"
-               href="#/decisions">
+               href="#/decisions"
+               ng-if="hasDecisionSearch">
               {{ (!data.deployed.decisionDefinitions ? 0 : '') }}
               {{ data.deployed.decisionDefinitions | abbreviateNumber }}
             </a>
+            <span class="value"
+                  ng-if="!hasDecisionSearch">
+              {{ (!data.deployed.decisionDefinitions ? 0 : '') }}
+              {{ data.deployed.decisionDefinitions | abbreviateNumber }}
+            </span>
           </div>
 
           <div class="stats-section cases col-sm-12 col-md-6 col-lg-12">
